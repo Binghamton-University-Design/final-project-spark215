@@ -1,0 +1,30 @@
+/*stylesheet*/
+
+/* vars */
+:root{
+	--background-color:  #fff;
+	--body-color:  #111;
+}
+
+body{
+
+	margin: 0;
+	color: var(--body-color);
+	/*
+	Use intro image as background
+		background: url(../images/longintro.png) no-repeat initial;
+	Restricts image to fit screen
+		background-size: cover;
+	*/
+}
+
+img{
+	display: block;
+	width: 100%;
+	object-fit: cover;
+}
+
+#wrapper{
+	margin: 0 auto;
+	max-width: 1200px;
+}
