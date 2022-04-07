@@ -11,52 +11,104 @@
 
 		<!--  Bookmark Icon-->
 		<!-- <link rel="icon" type="image/png" href="images/logo_vector.png">-->
-
 		<title>Mr.Widemouth</title>
 	</head>
 
 	<body>
-		<img src="images/longintro.png">
-		<div id="wrapper">
-			<div class="grid">
-				<div class="width-12-12-m width-12-12">
-					12 columns
-				</div>
-				<div class="width-3-12-m width-3-12">
-					3 columns
-				</div>
-				<div class="width-9-12-m width-9-12">
-					9 columns
-				</div>
+				<!-- JAVA SCRIPT FOR SCROLL -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script type= "text/javascript">
+		//intro scroll images
+		const introImages = {
+			1: "images/intro15/intro1000.png",
+			2: "images/intro15/intro1001.png",
+			3: "images/intro15/intro1002.png",
+			4: "images/intro15/intro1003.png",
+			5: "images/intro15/intro1004.png",
+			6: "images/intro15/intro1005.png",
+			7: "images/intro15/intro1006.png",
+			8: "images/intro15/intro1007.png",
+			9: "images/intro15/intro1008.png",
+			10: "images/intro15/intro1009.png",
+			11: "images/intro15/intro1010.png",
+			12: "images/intro15/intro1011.png",
+			13: "images/intro15/intro1012.png",
+			14: "images/intro15/intro1013.png",
+			15: "images/intro15/intro1014.png",
+			16: "images/intro15/intro1015.png",
+			17: "images/intro15/intro1016.png",
+			18: "images/intro15/intro1017.png",
+			19: "images/intro15/intro1018.png",
+			20: "images/intro15/intro1019.png",
+			21: "images/intro15/intro1020.png",
+			22: "images/intro15/intro1021.png",
+			23: "images/intro15/intro1022.png",
+			24: "images/intro15/intro1023.png",
+			25: "images/intro15/intro1024.png",
+			26: "images/intro15/intro1025.png",
+			27: "images/intro15/intro1026.png",
+			28: "images/intro15/intro1027.png",
+			29: "images/intro15/intro1028.png",
+			30: "images/intro15/intro1029.png",
+			31: "images/intro15/intro1030.png",
+			32: "images/intro15/intro1031.png",
+			33: "images/intro15/intro1032.png",
+			34: "images/intro15/intro1033.png",
+			35: "images/intro15/intro1034.png",
+			36: "images/intro15/intro1035.png",
+			37: "images/intro15/intro1036.png",
+			38: "images/intro15/intro1037.png",
+			39: "images/intro15/intro1038.png",
+			40: "images/intro15/intro1039.png",
+			41: "images/intro15/intro1040.png",
+			42: "images/intro15/intro1041.png",
+			43: "images/intro15/intro1042.png",
+			44: "images/intro15/intro1043.png",
+			45: "images/intro15/intro1044.png",
+			46: "images/intro15/intro1045.png",
+			47: "images/intro15/intro1046.png",
+			48: "images/intro15/intro1047.png",
+			49: "images/intro15/intro1048.png",
+			50: "images/intro15/intro1049.png",
+			51: "images/intro15/intro1050.png",
+			52: "images/intro15/intro1051.png",
+			53: "images/intro15/intro1052.png",
+			54: "images/intro15/intro1053.png",
+			55: "images/intro15/intro1054.png",
+			56: "images/intro15/intro1055.png",
+			57: "images/intro15/intro1056.png",
+			58: "images/intro15/intro1057.png",
+			59: "images/intro15/intro1058.png",
+			60: "images/intro15/intro1059.png",
+			61: "images/intro15/intro1060.png",
+			62: "images/intro15/intro1061.png",
+			63: "images/intro15/intro1062.png",
+			64: "images/intro15/intro1063.png",
+		}
 
-				<div class="width-1-12-m width-1-12">1</div>
-				<div class="width-1-12-m width-1-12">2</div>
-				<div class="width-1-12-m width-1-12">3</div>
-				<div class="width-1-12-m width-1-12">4</div>
-				<div class="width-1-12-m width-1-12">5</div>
-				<div class="width-1-12-m width-1-12">6</div>
-				<div class="width-1-12-m width-1-12">7</div>
-				<div class="width-1-12-m width-1-12">8</div>
-				<div class="width-1-12-m width-1-12">9</div>
-				<div class="width-1-12-m width-1-12">10</div>
-				<div class="width-1-12-m width-1-12">11</div>
-				<div class="width-1-12-m width-1-12">12</div>
+		// Global variable to control the scrolling behavior
+		const step = 30; // For each 30px, change an image
+		
+		function trackScrollPosition() {
+  			const y = window.scrollY;
+ 			const label = Math.min(Math.floor(y/30) + 1, 20);
+ 			const imageToUse = introImages[label];
+ 			
+ 			// Change the background image
+ 			$(".image-container").css("background-image", "url("${imageToUse}")");
+			}
 
+			$(document).ready(()=>{
+  				$(window).scroll(()=>{
+    				trackScrollPosition();
+  				})
+			})
+		
 
-				<div class="width-6-12-m width-6-12">
-					logo
-				</div>
-				<div class="width-6-12-m width-6-12">
-					other logo
-				</div>
-				<div class="width-12-12-m width-12-12">
-					main
-				</div>
+		</script>
+		<div class = "containter">
+			<div class = "image-container"> </div>
 
-
-
-
-			</div>
 		</div>
 	</body>
 </html>

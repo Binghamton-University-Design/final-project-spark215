@@ -2,8 +2,8 @@
 
 /* vars */
 :root{
-	--background-color:  #fff;
-	--body-color:  #111;
+	--background-color: black;
+	--body-color:  #fff;
 }
 
 body{
@@ -27,4 +27,35 @@ img{
 #wrapper{
 	margin: 0 auto;
 	max-width: 1200px;
+}
+
+/* IMAGE CONTAINER */
+.container{
+	position: relative;
+	width: 100%;
+	height: 1500px;
+}
+
+.image-container{
+	width: 100%;
+	height: 0;
+	padding-top: 45.347%;
+	position: sticky;
+	top: 0;
+	background-image:  url("../images/background.png");
+	background-size: cover;
+}
+
+/* SCROLL ANIMATION */
+
+.reveal{
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: 2s all ease;
+}
+
+.reveal.active{
+	transform: translateY(0);
+	opacity: 1;
 }
