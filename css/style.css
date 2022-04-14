@@ -10,12 +10,7 @@ body{
 
 	margin: 0;
 	color: var(--body-color);
-	/*
-	Use intro image as background
-		background: url(../images/longintro.png) no-repeat initial;
-	Restricts image to fit screen
-		background-size: cover;
-	*/
+	background-color: var(--background-color);
 }
 
 img{
@@ -29,33 +24,21 @@ img{
 	max-width: 1200px;
 }
 
-/* IMAGE CONTAINER */
-.container{
-	position: relative;
-	width: 100%;
-	height: 1500px;
-}
 
-.image-container{
-	width: 100%;
-	height: 0;
-	padding-top: 45.347%;
-	position: sticky;
-	top: 0;
-	background-image:  url("../images/background.png");
-	background-size: cover;
-}
+/*SCROLL ANIMATION*/
+.container {
+  position: relative;
+  width: 100%;
+  height: 1500px;
+ }
 
-/* SCROLL ANIMATION */
+.image-container {
+    width: 100%;
+    height: 0;
+    padding-top: 45.347%;
+    position: sticky;
+    top: 0;
+    background-size: cover;
+    background-image: url('https://drive.google.com/uc?id=1vtaubItASKilyvb5sgQO7D7gjAQ7xo0i');
+ }
 
-.reveal{
-	position: relative;
-	transform: translateY(150px);
-	opacity: 0;
-	transition: 2s all ease;
-}
-
-.reveal.active{
-	transform: translateY(0);
-	opacity: 1;
-}
